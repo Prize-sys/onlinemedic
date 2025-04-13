@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "onlinemedic-d344d"
+  },
+  "targets": {
+    "onlinemedic-d344d": {
+      "hosting": {
+        "onlinemedic-d344d": [
+          "onlinemedic-d344d"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

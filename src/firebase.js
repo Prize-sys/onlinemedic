@@ -2,15 +2,17 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
-const app = initializeApp({
-    apiKey: "AIzaSyBpAyYXqRBe2VVe_00dnQ8YSxYbiCR0HW4",
-    authDomain: "onlinemedic-d344d.firebaseapp.com",
-    projectId: "onlinemedic-d344d",
-    storageBucket: "onlinemedic-d344d.firebasestorage.app",
-    messagingSenderId: "415223622550",
-    appId: "1:415223622550:web:8caf5b9f13b4b8c8674bb7",
-    measurementId: "G-J0RB3LJZPD"
-});
+const firebaseConfig = {
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
+};
+
+const app = initializeApp(firebaseConfig);
 
 export const auth = getAuth(app);
 export const db = getFirestore(app);

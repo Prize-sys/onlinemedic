@@ -1,7 +1,7 @@
 import axios from "axios"; // Importing Axios for making HTTP requests
 
-// API key for authentication
-const apiKey = "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";
+// API key for authentication (moved to .env file)
+const apiKey = import.meta.env.VITE_OPENROUTER_API_KEY;
 
 // OpenRouter API endpoint
 const endpoint = "https://openrouter.ai/api/v1";
